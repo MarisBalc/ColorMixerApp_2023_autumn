@@ -10,6 +10,7 @@ namespace ColorMixerApp_2023_autumn
         public Form1()
         {
             InitializeComponent();
+            this.Text = "El's color Mixer";
 
         }
 
@@ -23,7 +24,7 @@ namespace ColorMixerApp_2023_autumn
 
             redBox.BackColor = Color.FromArgb(redValue, greenValue, blueValue);
 
-            this.BackColor = Color.FromArgb(redMixerValue, greenMixerValue, blueMixerValue);
+            SetBackgroundColor();
         }
 
         private void greenBox_Click(object sender, EventArgs e)
@@ -43,11 +44,10 @@ namespace ColorMixerApp_2023_autumn
             int blueValue = 0;
 
             greenMixerValue = greenValue;
-            
+
             greenBox.BackColor = Color.FromArgb(redValue, greenValue, blueValue);
 
-            this.BackColor = Color.FromArgb(redMixerValue, greenMixerValue, blueMixerValue);
-
+            SetBackgroundColor();
         }
 
         private void numericBlue_ValueChanged(object sender, EventArgs e)
@@ -60,7 +60,33 @@ namespace ColorMixerApp_2023_autumn
 
             blueBox.BackColor = Color.FromArgb(redValue, greenValue, blueValue);
 
+            SetBackgroundColor();
+        }
+
+        private void sliderRed_Scroll(object sender, EventArgs e)
+        {
+            numericRed.Value = sliderRed.Value;
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            numericBlue.Value = sliderBlue.Value;
+        }
+
+        private void sliderGreen_Scroll(object sender, EventArgs e)
+        {
+            numericGreen.Value = sliderGreen.Value;
+        }
+
+        private void SetBackgroundColor()
+        {
             this.BackColor = Color.FromArgb(redMixerValue, greenMixerValue, blueMixerValue);
+            this.Text = $"RGB value ({redMixerValue}, {greenMixerValue}, {blueMixerValue})";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
