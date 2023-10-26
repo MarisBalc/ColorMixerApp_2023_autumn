@@ -88,5 +88,27 @@ namespace ColorMixerApp_2023_autumn
         {
 
         }
+
+        private void randomButton_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            int red = random.Next(0, 256);
+            int green = random.Next(0, 256);
+            int blue = random.Next(0, 256);
+
+            redMixerValue = red;
+            greenMixerValue = green;
+            blueMixerValue = blue;
+
+            numericRed.Value = red;
+            numericGreen.Value = green;
+            numericBlue.Value = blue;
+
+            sliderRed.Value = red;
+            sliderGreen.Value = green;
+            sliderBlue.Value = blue;
+
+            SetBackgroundColor();
+        }
     }
 }

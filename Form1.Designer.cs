@@ -38,6 +38,7 @@
             sliderRed = new TrackBar();
             sliderGreen = new TrackBar();
             sliderBlue = new TrackBar();
+            randomButton = new Button();
             ((System.ComponentModel.ISupportInitialize)redBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)greenBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)blueBox).BeginInit();
@@ -138,11 +139,22 @@
             sliderBlue.TickStyle = TickStyle.None;
             sliderBlue.Scroll += trackBar1_Scroll;
             // 
+            // randomButton
+            // 
+            randomButton.Location = new Point(430, 491);
+            randomButton.Name = "randomButton";
+            randomButton.Size = new Size(192, 75);
+            randomButton.TabIndex = 9;
+            randomButton.Text = "Random collor";
+            randomButton.UseVisualStyleBackColor = true;
+            randomButton.Click += this.randomButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(947, 576);
+            ClientSize = new Size(947, 639);
+            Controls.Add(randomButton);
             Controls.Add(sliderBlue);
             Controls.Add(sliderGreen);
             Controls.Add(sliderRed);
@@ -180,5 +192,6 @@
         private TrackBar sliderRed;
         private TrackBar sliderGreen;
         private TrackBar sliderBlue;
+        private Button randomButton;
     }
 }
