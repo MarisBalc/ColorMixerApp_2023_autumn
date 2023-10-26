@@ -141,13 +141,13 @@
             // 
             // randomButton
             // 
-            randomButton.Location = new Point(430, 491);
+            randomButton.Location = new Point(369, 474);
             randomButton.Name = "randomButton";
             randomButton.Size = new Size(192, 75);
             randomButton.TabIndex = 9;
             randomButton.Text = "Random collor";
             randomButton.UseVisualStyleBackColor = true;
-            randomButton.Click += this.randomButton_Click;
+            randomButton.Click += randomButton_Click;
             // 
             // Form1
             // 
